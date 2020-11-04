@@ -1,0 +1,65 @@
+:root {
+  --contrast-color: #d7385e;
+  --dark-color: #132743;
+  --light-color: #edc988;
+  --lighter-color: #f8efd4;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  background-color: var(--lighter-color);
+}
+
+h1 {
+  font-family: var(--heading-font);
+  color: var(--dark-color);
+  font-size: 27px;
+}
+
+header {
+  background-color: var(--light-color);
+  border-bottom: 3px solid var(--dark-color);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header nav ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 8px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  position: relative;
+  color: var(--dark-color);
+  font-size: 27px;
+}
+
+header nav ul li a:hover {
+  color: var(--contrast-color);
+}
+
+.hitta_oss_flex {
+  display: flex;
+}
+
+#hitta_oss_flex_bild {
+  flex: 6;
+  color: var(--dark-color);
+  padding: 10px;
+}
+
+#hitta_oss_flex_text {
+  flex: 4;
+  color: var(--dark-color);
+  padding: 10px;
+}
