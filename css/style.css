@@ -74,3 +74,18 @@ img {
   padding: 50px;
   grid-area: 1 / 1 / 1 / 1;
 }
+
+#meny-grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  width: 100vw;
+}
+
+.meny-grid-item {
+  background-color: var(--light-color);
+  border-radius: 3vw;
+  border: 3px solid var(--dark-color);
+  height: 24vw;
+  width: 20vw;
+  margin: 3vw;
+}
