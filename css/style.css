@@ -75,17 +75,26 @@ img {
   grid-area: 1 / 1 / 1 / 1;
 }
 
-#meny-grid {
+#meny_grid {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   width: 100vw;
 }
 
-.meny-grid-item {
+.meny_grid_item {
   background-color: var(--light-color);
   border-radius: 3vw;
   border: 3px solid var(--dark-color);
   height: 24vw;
   width: 20vw;
   margin: 3vw;
+}
+
+#om_oss_grid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.om_oss_grid_item {
+  padding: 40px;
 }
