@@ -1,0 +1,2 @@
+[1115/174956.996:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\elis.bergling\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\c1b79e3c-8930-474d-a7a1-542a719f6a62: Det går inte att hitta sökvägen. (0x3)
+[1115/175953.884:ERROR:directory_reader_win.cc(43)] FindFirstFile: Det går inte att hitta sökvägen. (0x3)
