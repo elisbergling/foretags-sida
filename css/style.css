@@ -210,6 +210,60 @@ img {
   background-color: #b7183f;
 }
 
+/* Varukorg */
+#varukorg_grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / 1.5fr 4fr 1fr;
+  grid-gap: 6vw 3vw;
+  background-color: var(--light-color);
+  border-radius: 3vw;
+  border: 3px solid var(--dark-color);
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  padding: 3vw;
+}
+
+#varukorg_grid p {
+  font-size: 2.8vw;
+  font-weight: bold;
+}
+
+#varukorg_grid img {
+  border-radius: 2vw;
+  align-self: center;
+}
+
+#varukorg_text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-top: 3vw;
+  margin-bottom: 5vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+#varukorg_button {
+  margin-bottom: 3vw;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  background-color: var(--contrast-color);
+  border-radius: 5vw;
+  border: 3px solid var(--dark-color);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  padding: 1.5vw;
+  transition: background-color 0.2s;
+}
+
+#varukorg_button:hover {
+  background-color: #b7183f;
+}
+
 @media only screen and (max-width: 750px) {
 
   /* Home */
