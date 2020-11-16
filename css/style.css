@@ -239,11 +239,26 @@ img {
 /* Om oss */
 #om_oss_grid {
   display: grid;
+  margin: 5vw;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template-areas: "om_oss img1""img2 teamet";
+  grid-gap: 5vw 5vw;
 }
 
-.om_oss_grid_item {
-  padding: 40px;
+#om_oss_grid_om_oss {
+  grid-area: om_oss;
+}
+
+#om_oss_grid_img1 {
+  grid-area: img1;
+}
+
+#om_oss_grid_teamet {
+  grid-area: teamet;
+}
+
+#om_oss_grid_img2 {
+  grid-area: img2;
 }
 
 /* Hiita oss */
@@ -325,6 +340,12 @@ img {
     font-size: 5vw;
     margin-top: 4vw;
     margin-bottom: 4vw;
+  }
+
+  /* Om oss */
+  #om_oss_grid {
+    grid-template: 0.8fr 1fr 1fr 1fr / 1fr;
+    grid-template-areas: "om_oss"" img1""teamet""img2 ";
   }
 
   /* Hiita oss */
