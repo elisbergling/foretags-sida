@@ -5,6 +5,7 @@
   --lighter-color: #f8efd4;
 }
 
+/* Header / Footer */
 body {
   font-family: Roboto, sans-serif;
   padding: 0;
@@ -13,9 +14,11 @@ body {
 }
 
 h1 {
-  font-family: var(--heading-font);
   color: var(--dark-color);
-  font-size: 27px;
+}
+
+p {
+  color: var(--dark-color);
 }
 
 header {
@@ -23,32 +26,64 @@ header {
   border-bottom: 3px solid var(--dark-color);
 }
 
+header h1 {
+  font-family: var(--heading-font);
+  color: var(--dark-color);
+  font-size: 2.6vw;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
 header nav {
   display: flex;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 2vw;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li {
   text-decoration: none;
   display: inline-block;
-  margin: 8px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding: 0;
 }
 
 header nav ul li a {
   text-decoration: none;
   position: relative;
   color: var(--dark-color);
-  font-size: 27px;
+  font-size: 2.6vw;
   font-weight: bold;
   transition: color 0.2s;
+  margin: 0;
 }
 
 header nav ul li a:hover {
   color: var(--contrast-color);
 }
 
+footer {
+  background-color: var(--light-color);
+  border-top: 3px solid var(--dark-color);
+  padding: 2vw;
+}
+
+footer h1 {
+  margin: 0;
+  font-size: 2.6vw;
+}
+
+#home_footer {
+  background-color: var(--lighter-color);
+}
+
+/* Sherad */
 img {
   border-radius: 3vw;
   border: 3px solid var(--dark-color);
@@ -173,9 +208,7 @@ img {
 }
 
 .meny_grid_item_button p {
-  grid-area: button;
   text-align: center;
-  color: var(--dark-color);
   font-weight: bold;
   font-size: 1.8vw;
   margin-top: 1.8vw;
@@ -219,11 +252,11 @@ img {
 }
 
 #varukorg_button {
-  margin-bottom: 3vw;
+  margin-bottom: 5vw;
   margin-left: 30vw;
   margin-right: 30vw;
   background-color: var(--contrast-color);
-  border-radius: 5vw;
+  border-radius: 50px;
   border: 3px solid var(--dark-color);
   font-weight: 600;
   font-size: 20px;
@@ -304,7 +337,7 @@ img {
   }
 
   .home_grid {
-    grid-template: 1fr 4fr 2fr 2fr;
+    grid-template-rows: repeat(4, auto);
     grid-row-gap: 5vw;
   }
 
@@ -325,7 +358,6 @@ img {
 
   .meny_grid_item_img {
     border-radius: 3vw;
-    align-self: flex-start;
   }
 
   .meny_grid_item_name {
@@ -342,15 +374,31 @@ img {
     margin-bottom: 4vw;
   }
 
+  /* Varukorg */
+  #varukorg_grid {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  #varukorg_text {
+    margin-left: 13vw;
+    margin-right: 13vw;
+  }
+
+  #varukorg_button {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
   /* Om oss */
   #om_oss_grid {
-    grid-template: 0.8fr 1fr 1fr 1fr / 1fr;
+    grid-template: 0.8fr auto 1fr auto / 1fr;
     grid-template-areas: "om_oss"" img1""teamet""img2 ";
   }
 
   /* Hiita oss */
   .hitta_oss_grid {
-    grid-template: 1.5fr 1fr / 1fr;
+    grid-template: 1fr auto / 1fr;
     grid-template-areas: "text""img";
     margin: 5vw;
   }
