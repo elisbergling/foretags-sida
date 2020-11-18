@@ -171,6 +171,11 @@ img {
   background-color: var(--light-color);
   border-radius: 3vw;
   border: 3px solid var(--dark-color);
+  transition: background-color 0.2s;
+}
+
+.meny_grid_item:hover {
+  background-color: #ddb978;
 }
 
 .meny_grid_item_img {
@@ -185,6 +190,10 @@ img {
   font-weight: bold;
   font-size: 2vw;
   color: var(--dark-color);
+}
+
+a {
+  position: relative;
 }
 
 .meny_grid_item_price {
@@ -309,6 +318,25 @@ img {
 #hitta_oss_grid_text {
   color: var(--dark-color);
   grid-area: text;
+}
+
+/* Om Pizzan*/
+#om_pizzan_button {
+  margin-top: 2vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  background-color: var(--contrast-color);
+  border-radius: 50px;
+  border: 3px solid var(--dark-color);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  padding: 1vw;
+  transition: background-color 0.2s;
+}
+
+#om_pizzan_button:hover {
+  background-color: #b7183f;
 }
 
 @media only screen and (max-width: 750px) {
