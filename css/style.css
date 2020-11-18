@@ -29,7 +29,7 @@ header {
 header h1 {
   font-family: var(--heading-font);
   color: var(--dark-color);
-  font-size: 2.6vw;
+  font-size: 3vw;
   align-self: center;
   margin: 0;
   padding: 0;
@@ -58,7 +58,7 @@ header nav ul li a {
   text-decoration: none;
   position: relative;
   color: var(--dark-color);
-  font-size: 2.6vw;
+  font-size: 3vw;
   font-weight: bold;
   transition: color 0.2s;
   margin: 0;
@@ -76,7 +76,7 @@ footer {
 
 footer h1 {
   margin: 0;
-  font-size: 2.6vw;
+  font-size: 27px;
 }
 
 #home_footer {
@@ -87,10 +87,6 @@ footer h1 {
 img {
   border-radius: 3vw;
   border: 3px solid var(--dark-color);
-}
-
-.rubrik {
-  font-weight: bold;
 }
 
 /* Home */
@@ -189,11 +185,6 @@ img {
   text-align: start;
   font-weight: bold;
   font-size: 2vw;
-  color: var(--dark-color);
-}
-
-a {
-  position: relative;
 }
 
 .meny_grid_item_price {
@@ -201,7 +192,6 @@ a {
   text-align: center;
   font-weight: bold;
   font-size: 2vw;
-  color: var(--dark-color);
 }
 
 .meny_grid_item_button {
@@ -228,7 +218,7 @@ a {
 #varukorg_grid {
   display: grid;
   grid-template: repeat(3, 1fr) / 1.5fr 4fr 1fr;
-  grid-gap: 6vw 3vw;
+  grid-gap: 4vw 2vw;
   background-color: var(--light-color);
   border-radius: 3vw;
   border: 3px solid var(--dark-color);
@@ -236,11 +226,11 @@ a {
   margin-bottom: 5vw;
   margin-left: 15vw;
   margin-right: 15vw;
-  padding: 3vw;
+  padding: 2vw;
 }
 
 #varukorg_grid p {
-  font-size: 2.8vw;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -252,7 +242,7 @@ a {
 #varukorg_text {
   display: flex;
   justify-content: space-between;
-  font-size: 3vw;
+  font-size: 30px;
   font-weight: bold;
   margin-top: 3vw;
   margin-bottom: 5vw;
@@ -268,7 +258,7 @@ a {
   border-radius: 50px;
   border: 3px solid var(--dark-color);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   padding: 1.5vw;
   transition: background-color 0.2s;
@@ -304,10 +294,11 @@ a {
 }
 
 /* Hiita oss */
-.hitta_oss_grid {
+#hitta_oss_grid {
   display: grid;
   grid-template: 1fr / 4fr 6fr;
   grid-template-areas: "text img";
+  grid-gap: 10vw;
   margin: 5vw;
 }
 
@@ -317,14 +308,30 @@ a {
 
 #hitta_oss_grid_text {
   color: var(--dark-color);
+  align-self: center;
   grid-area: text;
 }
 
 /* Om Pizzan*/
-#om_pizzan_button {
+#om_pizzan_grid {
+  display: grid;
+  grid-template: 1fr / 4fr 6fr;
+  grid-template-areas: "text img";
+  grid-gap: 10vw;
+  margin: 5vw;
+}
+
+#om_pizzans_grid_text {
+  justify-content: flex-start;
+  grid-area: text;
+}
+
+#om_pizzan_grid_img {
+  grid-area: img;
+}
+
+#om_pizzan_grid_button {
   margin-top: 2vw;
-  margin-left: 3vw;
-  margin-right: 3vw;
   background-color: var(--contrast-color);
   border-radius: 50px;
   border: 3px solid var(--dark-color);
@@ -335,7 +342,7 @@ a {
   transition: background-color 0.2s;
 }
 
-#om_pizzan_button:hover {
+#om_pizzan_grid_button:hover {
   background-color: #b7183f;
 }
 
@@ -346,16 +353,7 @@ a {
     margin-top: 0;
   }
 
-  #home_grid_1 {
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "rubrik"
-      "img"
-      "text"
-      "button";
-  }
-
-  #home_grid_2 {
+  #home_grid_1, #home_grid_2 {
     grid-template-columns: 100%;
     grid-template-areas:
       "rubrik"
@@ -371,7 +369,7 @@ a {
 
   /* Meny */
   #meny_grid {
-    grid-template: repeat(9, 100vw) / 1fr;
+    grid-template: repeat(9, 1fr) / 1fr;
   }
 
   .meny_grid_item {
@@ -420,14 +418,23 @@ a {
 
   /* Om oss */
   #om_oss_grid {
-    grid-template: 0.8fr auto 1fr auto / 1fr;
-    grid-template-areas: "om_oss"" img1""teamet""img2 ";
+    grid-template: auto auto auto auto / 1fr;
+    grid-template-areas: "om_oss""img1""teamet""img2 ";
   }
 
   /* Hiita oss */
-  .hitta_oss_grid {
-    grid-template: 1fr auto / 1fr;
+  #hitta_oss_grid {
+    grid-template: auto auto / 1fr;
     grid-template-areas: "text""img";
     margin: 5vw;
+  }
+
+  /* Om Pizzan */
+  #om_pizzan_grid {
+    grid-template: auto auto / 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+    grid-gap: 3vw;
   }
 }
