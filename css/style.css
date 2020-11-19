@@ -130,6 +130,7 @@ img {
 
 .home_grid_img {
   grid-area: img;
+  align-self: center;
 }
 
 .home_grid_button {
@@ -222,64 +223,61 @@ img {
 }
 
 /* Varukorg */
-#varukorg_grid {
+.varukorg_main_grid {
   display: grid;
-  grid-template: repeat(3, 1fr) / 1.5fr 5fr;
-  grid-template-areas:
-    "img1 text1"
-    "img2 text2"
-    "img3 text3";
-  grid-gap: 4vw 2vw;
-  background-color: var(--light-color);
-  border-radius: 3vw;
-  border: 3px solid var(--dark-color);
+  grid-template: repeat(3, 1fr) / 1fr;
   margin-top: 5vw;
   margin-bottom: 5vw;
   margin-left: 15vw;
   margin-right: 15vw;
+  border-radius: 3vw;
+  border: 3px solid var(--dark-color);
+}
+
+.varukorg_grid {
+  display: grid;
+  grid-template: 1fr / 1.5fr 5fr;
+  grid-template-areas:
+    "img text";
+  grid-gap: 4vw 2vw;
+  background-color: var(--light-color);
   padding: 2vw;
 }
 
-#varukorg_grid_text1 {
-  grid-areas: text1;
+#varukorg_grid1 {
+  border-top-left-radius: 2.7vw;
+  border-top-right-radius: 2.7vw;
+  border-bottom: 3px solid var(--dark-color);
 }
 
-#varukorg_grid_text2 {
-  grid-areas: text2;
+#varukorg_grid3 {
+  border-bottom-left-radius: 2.6vw;
+  border-bottom-right-radius: 2.7vw;
+  border-top: 3px solid var(--dark-color);
 }
 
-#varukorg_grid_text3 {
-  grid-areas: text3;
+.varukorg_grid_img {
+  grid-areas: img;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2vw;
+  border-radius: 2vw;
+  align-self: center;
 }
 
-#varukorg_grid_img1 {
-  grid-areas: img1;
-}
-
-#varukorg_grid_img2 {
-  grid-areas: img2;
-}
-
-#varukorg_grid_img3 {
-  grid-areas: img3;
-}
-
-#varukorg_grid p {
-  font-size: 28px;
-  font-weight: bold;
-  display: inline;
-}
-
-#varukorg_grid div {
+.varukorg_grid_text {
+  grid-areas: text;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 2vw;
 }
 
-#varukorg_grid img {
-  border-radius: 2vw;
-  align-self: center;
+.varukorg_grid_text p {
+  font-size: 28px;
+  font-weight: bold;
+  display: inline;
 }
 
 #varukorg_text {
@@ -444,19 +442,13 @@ img {
   }
 
   /* Varukorg */
-  #varukorg_grid {
-    display: grid;
-    grid-template: repeat(6, auto) / 1fr;
+  .varukorg_grid {
+    grid-template: repeat(2, auto) / 1fr;
     grid-template-areas:
-      "img1"
-      "text1"
-      "img2"
-      "text2"
-      "img3"
-      "text3";
+      "img"
+      "text";
     grid-gap: 1vw 1vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    padding: 4vw;
   }
 
   #varukorg_text {

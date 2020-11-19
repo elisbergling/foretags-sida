@@ -4,3 +4,4 @@
 [1116/120725.690:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\elis.bergling\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\ff0de385-0480-49c5-8735-30363c2a15bf: Det går inte att hitta sökvägen. (0x3)
 [1116/165830.110:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\elis.bergling\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\24d5d842-4175-4a76-aaf0-ad441d7c02b0: Det går inte att hitta sökvägen. (0x3)
 [1116/190541.744:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\elis.bergling\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\7e5dce84-738d-4b61-a8ee-195875844bb1: Det går inte att hitta sökvägen. (0x3)
+[1119/205337.996:ERROR:crash_report_database_win.cc(457)] unexpected header
