@@ -3,6 +3,8 @@
   --dark-color: #132743;
   --light-color: #edc988;
   --lighter-color: #f8efd4;
+  --button-hover-color: #c7284d;
+  --meny-item-hover-color: #ddb978;
 }
 
 /* Header / Footer */
@@ -144,7 +146,7 @@ img {
 }
 
 .home_grid_button:hover {
-  background-color: #b7183f;
+  background-color: var(--button-hover-color);
 }
 
 /* Meny */
@@ -172,7 +174,7 @@ img {
 }
 
 .meny_grid_item:hover {
-  background-color: #ddb978;
+  background-color: var(--meny-item-hover-color);
 }
 
 .meny_grid_item_img {
@@ -208,7 +210,7 @@ img {
 }
 
 .meny_grid_item_button:hover {
-  background-color: #c7284d;
+  background-color: var(--button-hover-color);
 }
 
 .meny_grid_item_button p {
@@ -222,7 +224,11 @@ img {
 /* Varukorg */
 #varukorg_grid {
   display: grid;
-  grid-template: repeat(3, 1fr) / 1.5fr 4fr 1fr;
+  grid-template: repeat(3, 1fr) / 1.5fr 5fr;
+  grid-template-areas:
+    "img1 text1"
+    "img2 text2"
+    "img3 text3";
   grid-gap: 4vw 2vw;
   background-color: var(--light-color);
   border-radius: 3vw;
@@ -234,9 +240,41 @@ img {
   padding: 2vw;
 }
 
+#varukorg_grid_text1 {
+  grid-areas: text1;
+}
+
+#varukorg_grid_text2 {
+  grid-areas: text2;
+}
+
+#varukorg_grid_text3 {
+  grid-areas: text3;
+}
+
+#varukorg_grid_img1 {
+  grid-areas: img1;
+}
+
+#varukorg_grid_img2 {
+  grid-areas: img2;
+}
+
+#varukorg_grid_img3 {
+  grid-areas: img3;
+}
+
 #varukorg_grid p {
   font-size: 28px;
   font-weight: bold;
+  display: inline;
+}
+
+#varukorg_grid div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2vw;
 }
 
 #varukorg_grid img {
@@ -348,7 +386,7 @@ img {
 }
 
 #om_pizzan_grid_button:hover {
-  background-color: #b7183f;
+  background-color: var(--button-hover-color);
 }
 
 @media only screen and (max-width: 750px) {
@@ -407,6 +445,16 @@ img {
 
   /* Varukorg */
   #varukorg_grid {
+    display: grid;
+    grid-template: repeat(6, auto) / 1fr;
+    grid-template-areas:
+      "img1"
+      "text1"
+      "img2"
+      "text2"
+      "img3"
+      "text3";
+    grid-gap: 1vw 1vw;
     margin-left: 5vw;
     margin-right: 5vw;
   }
@@ -424,7 +472,7 @@ img {
   /* Om oss */
   #om_oss_grid {
     grid-template: auto auto auto auto / 1fr;
-    grid-template-areas: "om_oss""img1""teamet""img2 ";
+    grid-template-areas: "om_oss""img1""teamet""img2";
   }
 
   /* Hiita oss */
