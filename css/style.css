@@ -163,6 +163,7 @@ img {
     "name name price"
     "button button button";
   align-items: center;
+  text-decoration: none;
   padding: 1.5vw;
   background-color: var(--light-color);
   border-radius: 3vw;
@@ -202,8 +203,12 @@ img {
   transition: background-color 0.2s;
 }
 
+.meny_grid_item_button p {
+  color: black;
+}
+
 .meny_grid_item_button:hover {
-  background-color: #b7183f;
+  background-color: #c7284d;
 }
 
 .meny_grid_item_button p {
