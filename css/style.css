@@ -16,11 +16,13 @@ body {
 }
 
 h1 {
+  font-family: Roboto, sans-serif;
   color: var(--dark-color);
 }
 
 p {
   color: var(--dark-color);
+  font-family: Georgia, serif;
 }
 
 header {
@@ -78,7 +80,6 @@ footer {
 
 footer h1 {
   margin: 0;
-  font-size: 27px;
 }
 
 #home_footer {
@@ -151,6 +152,35 @@ img {
 }
 
 /* Meny */
+#meny_selector {
+  display: flex;
+  margin-top: 3vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#meny_selector_text {
+  margin-left: 4vw;
+  margin-right: 2vw;
+}
+
+#meny_selector_button {
+  background-color: lightgrey;
+  border-radius: 1vw;
+  border: 3px solid var(--dark-color);
+  padding: 0.5vw;
+  transition: background-color 0.2s;
+}
+
+#meny_selector_button:hover {
+  background-color: grey;
+}
+
+#meny_selector_button h3 {
+  margin: 0vw;
+  padding: 0vw;
+}
+
 #meny_grid {
   display: grid;
   grid-template: repeat(3, 34vw) / repeat(3, 28vw);
@@ -189,6 +219,7 @@ img {
   text-align: start;
   font-weight: bold;
   font-size: 2vw;
+  font-family: Roboto, sans-serif;
 }
 
 .meny_grid_item_price {
@@ -196,6 +227,7 @@ img {
   text-align: center;
   font-weight: bold;
   font-size: 2vw;
+  font-family: Roboto, sans-serif;
 }
 
 .meny_grid_item_button {
@@ -206,20 +238,18 @@ img {
   transition: background-color 0.2s;
 }
 
-.meny_grid_item_button p {
-  color: black;
-}
-
 .meny_grid_item_button:hover {
   background-color: var(--button-hover-color);
 }
 
 .meny_grid_item_button p {
   text-align: center;
+  color: black;
   font-weight: bold;
   font-size: 1.8vw;
   margin-top: 1.8vw;
   margin-bottom: 1.8vw;
+  font-family: Roboto, sans-serif;
 }
 
 /* Varukorg */
@@ -257,7 +287,7 @@ img {
 }
 
 .varukorg_grid_img {
-  grid-areas: img;
+  grid-area: img;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -267,17 +297,11 @@ img {
 }
 
 .varukorg_grid_text {
-  grid-areas: text;
+  grid-area: text;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 2vw;
-}
-
-.varukorg_grid_text p {
-  font-size: 28px;
-  font-weight: bold;
-  display: inline;
 }
 
 #varukorg_text {
