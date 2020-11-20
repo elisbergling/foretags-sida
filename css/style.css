@@ -82,14 +82,21 @@ footer h1 {
   margin: 0;
 }
 
-#home_footer {
-  background-color: var(--lighter-color);
-}
-
 /* Sherad */
 img {
   border-radius: 3vw;
   border: 3px solid var(--dark-color);
+}
+
+.button {
+  background-color: var(--contrast-color);
+  border-radius: 50px;
+  border: 3px solid var(--dark-color);
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
 }
 
 /* Home */
@@ -137,18 +144,14 @@ img {
 .home_grid_button {
   grid-area: button;
   margin-top: 1vw;
-  background-color: var(--contrast-color);
-  border-radius: 50px;
-  border: 3px solid var(--dark-color);
   font-weight: 600;
   font-size: 20px;
   text-align: center;
   padding: 20px;
-  transition: background-color 0.2s;
 }
 
-.home_grid_button:hover {
-  background-color: var(--button-hover-color);
+#home_footer {
+  background-color: var(--lighter-color);
 }
 
 /* Meny */
@@ -232,14 +235,6 @@ img {
 
 .meny_grid_item_button {
   grid-area: button;
-  background-color: var(--contrast-color);
-  border-radius: 50px;
-  border: 3px solid var(--dark-color);
-  transition: background-color 0.2s;
-}
-
-.meny_grid_item_button:hover {
-  background-color: var(--button-hover-color);
 }
 
 .meny_grid_item_button p {
@@ -281,7 +276,7 @@ img {
 }
 
 #varukorg_grid3 {
-  border-bottom-left-radius: 2.6vw;
+  border-bottom-left-radius: 2.7vw;
   border-bottom-right-radius: 2.7vw;
   border-top: 3px solid var(--dark-color);
 }
@@ -319,18 +314,10 @@ img {
   margin-bottom: 5vw;
   margin-left: 30vw;
   margin-right: 30vw;
-  background-color: var(--contrast-color);
-  border-radius: 50px;
-  border: 3px solid var(--dark-color);
   font-weight: 600;
   font-size: 30px;
   text-align: center;
   padding: 1.5vw;
-  transition: background-color 0.2s;
-}
-
-#varukorg_button:hover {
-  background-color: #b7183f;
 }
 
 /* Om oss */
@@ -358,57 +345,31 @@ img {
   grid-area: img2;
 }
 
-/* Hiita oss */
-#hitta_oss_grid {
-  display: grid;
-  grid-template: 1fr / 4fr 6fr;
-  grid-template-areas: "text img";
-  grid-gap: 10vw;
-  margin: 5vw;
-}
-
-#hitta_oss_grid_bild {
-  grid-area: img;
-}
-
-#hitta_oss_grid_text {
-  color: var(--dark-color);
-  align-self: center;
-  grid-area: text;
-}
-
-/* Om Pizzan*/
-#om_pizzan_grid {
-  display: grid;
-  grid-template: 1fr / 4fr 6fr;
-  grid-template-areas: "text img";
-  grid-gap: 10vw;
-  margin: 5vw;
-}
-
-#om_pizzans_grid_text {
-  justify-content: flex-start;
-  grid-area: text;
-}
-
-#om_pizzan_grid_img {
-  grid-area: img;
-}
-
+/* Hitta oss och Om Pizzan */
 #om_pizzan_grid_button {
   margin-top: 2vw;
-  background-color: var(--contrast-color);
-  border-radius: 50px;
-  border: 3px solid var(--dark-color);
   font-weight: 600;
   font-size: 20px;
   text-align: center;
   padding: 1vw;
-  transition: background-color 0.2s;
 }
 
-#om_pizzan_grid_button:hover {
-  background-color: var(--button-hover-color);
+.hitta_oss_och_om_pizzan_grid {
+  display: grid;
+  grid-template: 1fr / 4fr 6fr;
+  grid-template-areas: "text img";
+  grid-gap: 10vw;
+  margin: 5vw;
+}
+
+.hitta_oss_och_om_pizzan_grid_bild {
+  grid-area: img;
+}
+
+.hitta_oss_och_om_pizzan_grid_text {
+  justify-content: flex-start;
+  align-self: center;
+  grid-area: text;
 }
 
 @media only screen and (max-width: 750px) {
@@ -491,19 +452,12 @@ img {
     grid-template-areas: "om_oss""img1""teamet""img2";
   }
 
-  /* Hiita oss */
-  #hitta_oss_grid {
-    grid-template: auto auto / 1fr;
-    grid-template-areas: "text""img";
-    margin: 5vw;
-  }
-
-  /* Om Pizzan */
-  #om_pizzan_grid {
+  /* Hitta Oss och Om Pizzan */
+  .hitta_oss_och_om_pizzan_grid {
     grid-template: auto auto / 1fr;
     grid-template-areas:
       "img"
       "text";
-    grid-gap: 3vw;
+    grid-gap: 5vw;
   }
 }
